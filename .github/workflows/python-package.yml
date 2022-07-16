@@ -6,7 +6,8 @@ name: Python package
 on:
   pull_request:
     branches: [ main, dev ]
-
+  push:
+    branches: [cdozen_tracker_dcs_web]
 jobs:
   build:
     runs-on: ubuntu-latest
