@@ -1,0 +1,15 @@
+name: docker-compose-actions-workflow
+on:
+  push:
+    branches: [cdozen_tracker_dcs_web]
+  #pull_request:
+  #  branches: [ main, dev ]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build the stack
+        run: docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d 
+      - name: Test docker compose ps
+        run: docker compose ps
