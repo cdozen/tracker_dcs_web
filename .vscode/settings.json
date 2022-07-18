@@ -1,0 +1,5 @@
+{
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": true
+}
