@@ -4,7 +4,6 @@ from tracker_dcs_web.utils.logger import logger
 
 
 mqtt_host = os.environ["MQTT_HOST"]
-#local_host= "docker.for.mac.host.internal"
 
 def on_connect(client, userdata, flags, rc):
     # Subscribing in on_connect() means that if we lose the connection and
@@ -15,4 +14,4 @@ def on_connect(client, userdata, flags, rc):
 client = mqtt.Client()
 client.on_connect = on_connect
 client.connect(mqtt_host, 1883, 60)
-#client.connect(local_host, 1883, 60)
+
